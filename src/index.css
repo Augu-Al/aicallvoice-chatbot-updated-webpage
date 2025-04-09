@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1920');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 3s ease-in-out;
+  animation: backgroundTransition 120s infinite;
+}
+
+@keyframes backgroundTransition {
+  0%, 100% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1920'); /* Elegant nail art */
+  }
+  25% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=1920'); /* Spa interior */
+  }
+  50% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1920'); /* Manicure setup */
+  }
+  75% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1920'); /* Relaxing spa */
+  }
+}
+
+/* Enhanced fade effect for smoother transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add a semi-transparent overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  animation: backgroundTransition 120s infinite, fadeIn 3s ease-in-out;
+}
